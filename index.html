@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calc</title>
+</head>
+<body>
+  
+  <style>
+    .num {
+      background-color: #222;
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: 1px solid #222;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+
+
+
+    }
+
+
+    .num2 {
+      background-color: orange;
+      color: #fff;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      cursor: pointer;
+      border: none;
+      font-weight: bold;
+      font-size: 30px;
+      text-align: center;
+
+    }
+
+    
+    .num2:hover{
+      background-color:rgb(192, 130, 6);
+
+    }
+
+    .resultinput {
+      background-color: #222;
+      color: #fff;
+      width: 100%;
+      outline: none;
+      border: none;
+      height: 70px;
+      margin: 15px auto;
+      font-size: 30px;
+      font-weight: bold;
+      border-radius: 10px;
+      text-align: center;
+
+    }
+
+    table {
+      width: 320px;
+      background-color: #111;
+      text-align: center;
+      margin: auto;
+      height: 540px;
+      margin-top: 40px;
+      padding: 15px 20px 20px 20px;
+      border-radius: 10px;
+    }
+  </style>
+
+</head>
+
+<body style="background-color: #000;">
+  
+  <form name="calc" style="margin:70px auto">
+
+    <table>
+      <tr>
+
+        <td colspan="4"> <input name="result" type="text" class="resultinput" disabled></td>
+      </tr>
+
+      <tr>
+        <td><input type="button" value="1" onClick="calc.result.value+='1'" class="num"></td>
+        <td><input type="button" value="2" onClick="calc.result.value+='2'" class="num"></td>
+        <td><input type="button" value="3" onClick="calc.result.value+='3'" class="num"></td>
+        <td><input type="button" value="+" onClick="calc.result.value+=' + '" class="num2"></td>
+
+      </tr>
+      <tr>
+
+        <td><input type="button" value="4" onClick="calc.result.value+='4'" class="num"></td>
+        <td><input type="button" value="5" onClick="calc.result.value+='5'" class="num"></td>
+        <td><input type="button" value="6" onClick="calc.result.value+='6'" class="num"></td>
+        <td><input type="button" value="x" onClick="calc.result.value+=' * '" class="num2"></td>
+
+      </tr>
+      <tr>
+
+        <td><input type="button" value="7" onClick="calc.result.value+='7'" class="num"></td>
+        <td><input type="button" value="8" onClick="calc.result.value+='8'" class="num"></td>
+        <td><input type="button" value="9" onClick="calc.result.value+='9'" class="num"></td>
+        <td><input type="button" value="-" onClick="add()" class="num2"></td>
+      </tr>
+
+
+      <tr>
+        <td><input type="button" value="/" onClick="calc.result.value+=' / '" class="num"></td>
+        <td><input type="button" value="0" onClick="calc.result.value+='0'" class="num"></td>
+        <td><input type="reset" value="c" onClick="calc.result.value+='' " class="num">
+        <td><input type="button" value="=" onClick="calc.result.value=eval(calc.result.value)" class="num2"></td>
+      </tr>
+    </table>
+
+  </form>
+
+
+  <script>
+
+var new
+function add(){
+  stop();
+
+  calc.result.value+=' - ';
+
+  var n = false;
+
+
+}
+function stop(){
+  if(n = false){
+    calc.result.value+='';
+
+
+  }
+
+}
+
+  </script>
+
+</body>
+
+</html>
